@@ -3,7 +3,7 @@
 use_default_settings: true
 
 server:
-  secret_key: "xK9#mP2$vL7@nQ4&wR8!jT5^"  # أي نص عشوائي
+  secret_key: "xK9mP2$vL7@nQ4&wR8!jT5^"  # أي نص عشوائي
   limiter: false  # مهم جداً — عطّل الـ rate limiter
   image_proxy: true
 
