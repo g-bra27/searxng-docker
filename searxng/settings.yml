@@ -1,65 +1,32 @@
 # see https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings
+# searxng/settings.yml
 use_default_settings: true
 
 server:
-  secret_key: "xK9#mP2$vL7@nQ4&wR8!jT5^"
-  limiter: false
+  secret_key: "xK9#mP2$vL7@nQ4&wR8!jT5^"  # أي نص عشوائي
+  limiter: false  # مهم جداً — عطّل الـ rate limiter
   image_proxy: true
-  port: 8080
-  bind_address: "0.0.0.0"
-
-redis:
-  url: redis://redis:6379/0
-
-general:
-  instance_name: "My SearXNG"
-  debug: false
-  privacypolicy_url: false
-  donation_url: false
-  contact_url: false
-
-search:
-  safe_search: 0
-  autocomplete: "google"
-  default_lang: "en"
-  ban_time_on_fail: 5
-  max_ban_time_on_fail: 120
-  formats:
-    - html
-    - json
-    - csv
-    - rss
 
 ui:
   static_use_hash: true
-  default_theme: simple
-  theme_args:
-    simple_style: dark        # dark / light / auto
-  infinite_scroll: true
-  center_alignment: false
-  default_locale: "en"
 
-enabled_plugins:
-  - 'Hash plugin'
-  - 'Search on category select'
-  - 'Self Informations'
-  - 'Tracker URL remover'
-  - 'Hostnames plugin'
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: "en"
+  formats:
+    - html
+    - json  # مهم جداً — لازم يكون موجود
 
 engines:
   - name: google
     engine: google
     shortcut: g
     
+  - name: bing
+    engine: bing
+    shortcut: b
+    
   - name: duckduckgo
     engine: duckduckgo
-    shortcut: d
-    
-  - name: brave
-    engine: brave
-    shortcut: br
-    
-  - name: wikipedia
-    engine: wikipedia
-    shortcut: w
-    language: ar
+    shortcut: ddg
